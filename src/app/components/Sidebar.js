@@ -1,19 +1,44 @@
-import { Disclosure } from "@headlessui/react";
-import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import React, { useState } from "react";
+import { SidebarContainer, SidebarLink, SidebarTitle, MenuIcon } from '../styles/Sidebarstyles.js'; // Adjust the import path as necessary
+import Link from 'next/link';
 
-export default function Sidebar() {
+function Sidebar() {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div>
-    <h1>Owen is god</h1>
-      <Disclosure as="nav">
-        <Disclosure.Button className="absolute top-4 right-4 inline-flex items-center peer justify-center rounded-md p-2 text-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group hover:bg-gray-900">
-          <GiHamburgerMenu
-            className="block md:hidden h-6 w-6"
-            aria-hidden="true"
-          />
-        </Disclosure.Button>
-      </Disclosure>
+      <MenuIcon
+        onClick={toggleSidebar}
+        style={{
+          position: 'fixed',
+          zIndex: '100',
+          left: `${isSidebarOpen ? '250px' : '10px'}`,
+          top: '10px',
+        }}
+      >
+        <span></span>
+      </MenuIcon>
+
+      <SidebarContainer isOpen={isSidebarOpen}>
+        <SidebarTitle>Sidebar Title</SidebarTitle>
+        <Link href="/" passHref><SidebarLink>Home</SidebarLink></Link>
+        <Link href="/accounts" passHref><SidebarLink>Accounts</SidebarLink></Link>
+      </SidebarContainer>
+
+      <div
+        style={{
+          marginLeft: `${isSidebarOpen ? '250px' : '0'}`,
+          padding: '20px',
+          transition: 'margin-left 0.3s ease-in-out',
+        }}
+      >
+      </div>
     </div>
   );
 }
+
+export default Sidebar;
