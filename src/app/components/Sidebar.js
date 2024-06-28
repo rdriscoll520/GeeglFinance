@@ -16,8 +16,9 @@ function Sidebar() {
         style={{
           position: 'fixed',
           zIndex: '100',
-          left: `${isSidebarOpen ? '250px' : '10px'}`,
+          left: `${isSidebarOpen ? '210px' : '10px'}`,
           top: '10px',
+          transition: 'margin-left 0.3s ease-in-out',
         }}
       >
         <span></span>
@@ -31,7 +32,7 @@ function Sidebar() {
 
       <div
         style={{
-          marginLeft: `${isSidebarOpen ? '250px' : '0'}`,
+          marginLeft: `${isSidebarOpen ? '240px' : '40px'}`,
           padding: '20px',
           transition: 'margin-left 0.3s ease-in-out',
         }}
