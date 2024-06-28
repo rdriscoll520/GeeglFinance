@@ -7,10 +7,7 @@ export default function Home() {
 
   return (
       <div>
-        <div>
-        <Navbar />
-        <Sidebar />
-        </div>
+        Owen
       </div>
 
   );
