@@ -5,7 +5,7 @@ function Navbar( {title} ) {
   return (
     <nav className="nav">
       <div className="site-title">
-        <Link href="/page">{title}</Link>
+        <Link href="/">{title}</Link>
       </div>
       <div className="links">
         <Link href="/" className='link'>Home</Link>
