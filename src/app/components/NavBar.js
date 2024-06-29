@@ -1,12 +1,14 @@
 import Link from 'next/link';
 
-function Navbar({ children }) {
+function Navbar( {title} ) {
+
   return (
     <nav className="nav">
       <div className="site-title">
-        <Link href="/">Finance Tracker</Link>
+        <Link href="/page">{title}</Link>
       </div>
       <div className="links">
+        <Link href="/">Home</Link>
         <Link href="/accounts">Accounts</Link>
         <Link href="/dashboard">Dashboard</Link>
         <Link href="/settings">Settings</Link>

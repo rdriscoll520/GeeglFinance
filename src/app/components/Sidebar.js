@@ -25,7 +25,7 @@ function Sidebar() {
       </MenuIcon>
 
       <SidebarContainer isOpen={isSidebarOpen}>
-        <SidebarTitle>Sidebar Title</SidebarTitle>
+        <SidebarTitle>Geegl Finance</SidebarTitle>
         <Link href="/" passHref><SidebarLink>Home</SidebarLink></Link>
         <Link href="/accounts" passHref><SidebarLink>Accounts</SidebarLink></Link>
       </SidebarContainer>

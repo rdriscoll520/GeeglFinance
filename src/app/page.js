@@ -1,14 +1,13 @@
 'use client'
 import './globals.css';
-import Sidebar from "./components/Sidebar";
-import Navbar from './components/NavBar';
+import RootLayout from './layout'
 
 export default function Home() {
 
   return (
-      <div>
-        Owen
-      </div>
+      <RootLayout title = "Home">
+        <h1>Home</h1>
+      </RootLayout>
 
   );
 }
