@@ -8,10 +8,10 @@ function Navbar( {title} ) {
         <Link href="/page">{title}</Link>
       </div>
       <div className="links">
-        <Link href="/">Home</Link>
-        <Link href="/accounts">Accounts</Link>
-        <Link href="/dashboard">Dashboard</Link>
-        <Link href="/settings">Settings</Link>
+        <Link href="/" className='link'>Home</Link>
+        <Link href="/accounts" className='link'>Accounts</Link>
+        <Link href="/dashboard" className='link'>Dashboard</Link>
+        <Link href="/settings" className='link'>Settings</Link>
       </div>
     </nav>
   );

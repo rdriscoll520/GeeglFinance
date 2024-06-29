@@ -9,36 +9,23 @@
 }
 
 .nav {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
+  @apply bg-gray-900 text-white flex justify-between items-center gap-8 p-4 shadow-lg;
 }
 
 .nav a {
-  color: inherit;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  padding: 0.25rem;
+  @apply text-inherit flex items-center px-3 py-2; /* Reduced padding */
 }
 
 .links {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
+  @apply p-0 m-0 list-none flex;
 }
 
 .site-title {
-  font-size: 3rem;
+  @apply text-3xl ml-10;
 }
-
-.nav li:hover {
-  background-color: rgb(86, 86, 86);
+.link {
+  @apply px-2 py-1; 
 }
-
-
+.link:hover {
+  @apply bg-cyan-950 rounded-md; /* Use rounded corners to limit hover effect area */
+}
