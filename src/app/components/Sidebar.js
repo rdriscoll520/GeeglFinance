@@ -15,7 +15,7 @@ function Sidebar() {
           position: 'fixed',
           zIndex: '100',
           left: `${isSidebarOpen ? '210px' : '10px'}`,
-          top: '10px',
+          top: '20px',
           transition: 'margin-left 0.3s ease-in-out',
         }}
       >
