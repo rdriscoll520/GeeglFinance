@@ -1,11 +1,12 @@
 import React from "react";
-import Layout from "../layout"
+import Navbar from "../components/NavBar";
+import Layout from '../layout'
 
 function Dashboard() {
   return (
-    <Layout title = "Dashboard">
+      <Layout title = "Dashboard">
         <h1>Dashboard</h1>
-    </Layout>
+      </Layout>
   );
 }
 
