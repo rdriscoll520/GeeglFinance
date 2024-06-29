@@ -18,7 +18,7 @@ export default function RootLayout({ children, title }) {
       </head>
       <body className={inter.className}>
         <SidebarProvider>
-          <Content title={title}>
+          <Content title={title}> 
             {children}
           </Content>
         </SidebarProvider>
@@ -27,7 +27,7 @@ export default function RootLayout({ children, title }) {
   );
 }
 
-function Content({ children, title }) {
+function Content({ children, title }) { //container for page-specific content
   const { isSidebarOpen } = useSidebar();
 
   return (
