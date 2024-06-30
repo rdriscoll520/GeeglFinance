@@ -5,11 +5,20 @@ import './globals.css';
 import Navbar from './components/NavBar';
 import Sidebar from './components/Sidebar';
 import { SidebarProvider, useSidebar } from './components/SidebarContext';
+import { useState, useEffect } from 'react'
+
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children, title }) {
-  return (
+
+  const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  return (isClient?
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
@@ -24,7 +33,7 @@ export default function RootLayout({ children, title }) {
         </SidebarProvider>
       </body>
     </html>
-  );
+  :<p></p>);
 }
 
 function Content({ children, title }) { //container for page-specific content
