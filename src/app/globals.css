@@ -9,9 +9,9 @@
 }
 
 .nav {
-  @apply bg-gray-900 text-white flex justify-between items-center gap-8 p-4 shadow-lg;
-  z-index: 10; 
+  @apply bg-gray-900 text-white flex justify-between items-center gap-8 shadow-lg;
   position: relative; /* layered above other stuff */
+  height: 80px;
 }
 
 .nav a {
@@ -23,7 +23,8 @@
 }
 
 .site-title {
-  @apply text-3xl ml-10;
+  @apply text-3xl;
+  margin-left: 50px;
 }
 .link {
   @apply px-2 py-1; 

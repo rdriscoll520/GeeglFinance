@@ -1,10 +1,16 @@
 import Link from 'next/link';
 
-function Navbar( {title} ) {
+function Navbar( {title, marL} ) {
 
   return (
     <nav className="nav">
-      <div className="site-title">
+      <div
+        className="site-title"
+        style={{
+          marginLeft: marL,
+          transition: 'margin-left 0.3s ease-in-out',
+        }}
+      >
         <Link href="/">{title}</Link>
       </div>
       <div className="links">

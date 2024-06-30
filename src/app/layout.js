@@ -40,7 +40,7 @@ function Content({ children, title }) {
 
   return (
     <>
-      <Navbar title={title} />
+      <Navbar title={title} marL={isSidebarOpen ? '250px' : '50px'}/>
       <Sidebar />
       <main
         style={{
