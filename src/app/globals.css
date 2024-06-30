@@ -10,14 +10,16 @@
 
 .nav {
   @apply bg-gray-900 text-white flex justify-between items-center gap-8 p-4 shadow-lg;
+  z-index: 10; 
+  position: relative; /* layered above other stuff */
 }
 
 .nav a {
-  @apply text-inherit flex items-center px-3 py-2; /* Reduced padding */
+  @apply text-inherit flex items-center px-3 py-2;
 }
 
 .links {
-  @apply p-0 m-0 list-none flex;
+  @apply p-0 m-0 list-none flex gap-2;
 }
 
 .site-title {
@@ -27,5 +29,15 @@
   @apply px-2 py-1; 
 }
 .link:hover {
-  @apply bg-cyan-950 rounded-md; /* Use rounded corners to limit hover effect area */
+  @apply bg-cyan-950 rounded-md;
+}
+.card {
+  @apply bg-white p-4 shadow-lg rounded-lg; 
+  z-index: 20; 
+  position: relative; 
+  margin: 1rem 0; 
+}
+
+.title {
+  @apply text-4xl;
 }
