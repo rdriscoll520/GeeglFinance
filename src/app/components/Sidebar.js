@@ -1,8 +1,27 @@
-"use client"
-import React from 'react';
+"use client";
+import React, { createContext, useState, useContext } from 'react';
 import { SidebarContainer, SidebarLink, SidebarTitle, MenuIcon } from '../styles/Sidebarstyles.js';
 import Link from 'next/link';
-import { useSidebar } from './SidebarContext.js';
+
+const SidebarContext = createContext();
+
+export function SidebarProvider({ children }) {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(prevState => !prevState);
+  };
+
+  return (
+    <SidebarContext.Provider value={{ isSidebarOpen, toggleSidebar }}>
+      {children}
+    </SidebarContext.Provider>
+  );
+}
+
+export function useSidebar() {
+  return useContext(SidebarContext);
+}
 
 function Sidebar() {
   const { isSidebarOpen, toggleSidebar } = useSidebar();
@@ -16,7 +35,7 @@ function Sidebar() {
           zIndex: '100',
           left: `${isSidebarOpen ? '210px' : '10px'}`,
           top: '20px',
-          transition: 'margin-left 0.3s ease-in-out',
+          transition: 'left 0.3s ease-in-out',
         }}
       >
         <span></span>
