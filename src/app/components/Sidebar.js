@@ -46,6 +46,7 @@ function Sidebar() {
         <Link href="/" passHref><SidebarLink>Home</SidebarLink></Link>
         <Link href="/accounts" passHref><SidebarLink>Accounts</SidebarLink></Link>
         <Link href="/dashboard" passHref><SidebarLink>Dashboard</SidebarLink></Link>
+        <Link href="/budget" passHref><SidebarLink>Budget</SidebarLink></Link>
         <Link href="/settings" passHref><SidebarLink>Settings</SidebarLink></Link>
       </SidebarContainer>
     </div>
