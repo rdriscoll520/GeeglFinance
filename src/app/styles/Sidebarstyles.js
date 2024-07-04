@@ -53,9 +53,8 @@ export const SidebarContainer = styled.div`
 export const SidebarLink = styled.div`
   padding: 10px 20px;
   color: #C9D1D9;
-  text-decoration: none;
   &:hover {
-    color: #58A6FF;
+    color: #FFFFFF;
     cursor: pointer;
   }
 `;

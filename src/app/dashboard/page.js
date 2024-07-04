@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/NavBar";
 import Layout from '../layout'
 import Card from '../components/Card'
 
